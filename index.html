@@ -2,11 +2,11 @@
 <html lang="en">
 	<head>
 
-		<title>Bitcoin Wallet by Coinb.in</title>
+		<title>Lucidcoin Wallet by Coinb.in</title>
 
         	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
-		<meta name="keywords" content="bitcoin, wallet, multisig, multisignature, address, browser, javascript, js, broadcast, transaction, verify, decode" />
-		<meta name="description" content="A Bitcoin Wallet written in Javascript. Supports Multisig, Custom Transactions, nLockTime and more!" />
+		<meta name="keywords" content="lucidcoin, wallet, multisig, multisignature, address, browser, javascript, js, broadcast, transaction, verify, decode" />
+		<meta name="description" content="A Lucidcoin Wallet written in Javascript. Supports Multisig, Custom Transactions, nLockTime and more!" />
 
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,8 +91,8 @@
 						</div>
 
 						<div class="jumbotron">
-							<h1>Bitcoin. It's your money!</h1>
-							<p>Be your own bank, take control of your own money and start using Bitcoin today!</p>
+							<h1>Lucidcoin. It's your money!</h1>
+							<p>Be your own bank, take control of your own money and start using Lucidcoin today!</p>
 							<p><a class="btn btn-primary btn-lg" href="#about" role="button">Learn more &raquo;</a></p>
 						</div>
 
@@ -106,11 +106,11 @@
 
 							<div class="col-md-4">
 								<h3><span class="glyphicon glyphicon-fullscreen"></span> MultiSig</h3>
-								<p>We offer a fully transparent <a href="#newMultiSig">multisig</a> solution which works seamlessly offline and with other bitcoin clients.</p>
+								<p>We offer a fully transparent <a href="#newMultiSig">multisig</a> solution which works seamlessly offline and with other lucidcoin clients.</p>
 							</div>
 
 							<div class="col-md-4">
-								<h3><span class="glyphicon glyphicon-bitcoin"></span> Raw Transactions</h3>
+								<h3><span class="glyphicon glyphicon-lucidcoin"></span> Raw Transactions</h3>
 								<p><a href="#newTransaction">Create</a>, <a href="#verify">verify</a>, <a href="#sign">sign</a> and <a href="#broadcast">broadcast</a> custom raw transactions online with advanced features and minimal effort!</p>
 							</div>
 						</div>
@@ -136,7 +136,7 @@
 					<div class="tab-pane tab-content" id="wallet">
 						<div class="row">
 							<div class="col-md-12">
-								<h2>Open Wallet <small> browser based bitcoin wallet</small></h2>
+								<h2>Open Wallet <small> browser based lucidcoin wallet</small></h2>
 								<div id="openLogin">
 									<form class="form-signin" role="form" action="javascript:;">
 
@@ -172,7 +172,7 @@
 													<li role="presentation" class="active"><a href="javascript:;" id="walletBalance">0.00 BTC</a></li>
 													<li role="presentation"><a href="javascript:;" id="walletShowSpend">Spend</a></li>
 													<li role="presentation"><a id="walletHistory" href="javascript:;" target="_blank">History</a></li>
-													<li role="presentation"><a href="https://localbitcoins.com/?ch=173j" target="_blank">Buy</a></li>
+													<li role="presentation"><a href="https://locallucidcoins.com/?ch=173j" target="_blank">Buy</a></li>
 													<li role="presentation"><a href="javascript:;" id="walletShowKeys">Keys</a></li>
 												</ul>
 
@@ -247,11 +247,11 @@
 
 					<div class="tab-pane tab-content" id="newAddress">
 						<h2>New Address <small>create a new address</small></h2>
-						<p>Any keys used you will need to manually store safely as they will be needed later to redeem the bitcoins.</p>
+						<p>Any keys used you will need to manually store safely as they will be needed later to redeem the lucidcoins.</p>
 						<label>Address (Share)</label>
 
 						<div class="input-group">
-							<input id="newBitcoinAddress" type="text" class="form-control address" value="" readonly>
+							<input id="newLucidcoinAddress" type="text" class="form-control address" value="" readonly>
 							<span class="input-group-btn">
 								<button class="qrcodeBtn btn btn-default" type="button" data-toggle="modal" data-target="#modalQrcode"><span class="glyphicon glyphicon-qrcode"></span></button>
 							</span>
@@ -312,8 +312,8 @@
 						<div class="row">
 
 							<div class="col-md-8">
-								<p>Public keys can be <a href="#newAddress">generated in your browser</a> or from your bitcoin client</a>.</p>
-								<p>Enter the public keys of all the participants, to create a <a href="https://en.bitcoin.it/wiki/Address#Multi-signature_addresses" target="_blank">multi signature address</a>. Maximum of 15 allowed. Compressed and uncompressed public keys are accepted.</p>
+								<p>Public keys can be <a href="#newAddress">generated in your browser</a> or from your lucidcoin client</a>.</p>
+								<p>Enter the public keys of all the participants, to create a <a href="https://en.lucidcoin.it/wiki/Address#Multi-signature_addresses" target="_blank">multi signature address</a>. Maximum of 15 allowed. Compressed and uncompressed public keys are accepted.</p>
 							</div>
 
 							<div class="col-md-3">
@@ -375,7 +375,7 @@
 								</div>
 							</div>
 							<label>Redeem Script</label>
-							<p>This script should be <i>saved and should be shared with all the participants before a payment is made</i>, so they may validate the authenticity of the address, it will also be used later to release the bitcoins.</p>
+							<p>This script should be <i>saved and should be shared with all the participants before a payment is made</i>, so they may validate the authenticity of the address, it will also be used later to release the lucidcoins.</p>
 							<textarea class="form-control script" style="height:160px" readonly></textarea>
 							<label>Shareable URL</label>
 							<input type="text" class="scriptUrl form-control" readonly>
@@ -391,8 +391,8 @@
                         <div class="row">
 
                             <div class="col-md-11">
-				<p>Use <i><a href="https://github.com/bitcoin/bips/blob/master/bip-0065.mediawiki" target="_blank">OP_CHECKLOCKTIMEVERIFY</a></i> (OP_HODL) to create a time locked address where the funds are unspendable until a set date and time has passed.</p>
-                                <p>Public keys can be <a href="#newAddress">generated in your browser</a> or from your bitcoin client</a>.</p>
+				<p>Use <i><a href="https://github.com/lucidcoin/bips/blob/master/bip-0065.mediawiki" target="_blank">OP_CHECKLOCKTIMEVERIFY</a></i> (OP_HODL) to create a time locked address where the funds are unspendable until a set date and time has passed.</p>
+                                <p>Public keys can be <a href="#newAddress">generated in your browser</a> or from your lucidcoin client</a>.</p>
                                 <p>Enter the public key that will be able to unlock the funds after the a certain date.
                             </div>
 
@@ -452,7 +452,7 @@
                                 </div>
                             </div>
                             <label>Redeem Script</label>
-                            <p>This script should be <i>saved and should be shared with all the participants before a payment is made</i>, so they may validate the authenticity of the address, it will also be used later to release the bitcoins.</p>
+                            <p>This script should be <i>saved and should be shared with all the participants before a payment is made</i>, so they may validate the authenticity of the address, it will also be used later to release the lucidcoins.</p>
                             <textarea class="form-control script" style="height:160px" readonly></textarea>
                             <label>Shareable URL</label>
                             <input type="text" class="scriptUrl form-control" readonly>
@@ -528,14 +528,14 @@
 
 								<label>Null Data</label> <span class="text-muted text-normal">(80 byte limit, <i>40 bytes recommended</i>)</span>
 								<p class="checkbox">
-									<label><input type="checkbox" id="opReturn" class="checkbox-inline"> Allow data to be sent within the transaction and stored in the blockchain by using <a href="https://bitcoin.org/en/developer-guide#null-data" target="_"blank">OP_RETURN</a>.</label>
+									<label><input type="checkbox" id="opReturn" class="checkbox-inline"> Allow data to be sent within the transaction and stored in the blockchain by using <a href="https://lucidcoin.org/en/developer-guide#null-data" target="_"blank">OP_RETURN</a>.</label>
 									<div class="text-muted">When using this option you may enter a hex string or address into the address field on the output tab.</div>
 								</p>
 
 								<hr>
 
 								<label>Lock Time</label>
-								<p>The <a href="https://bitcoin.org/en/developer-guide#locktime-and-sequence-number">locktime</a> indicates the earliest time a transaction can be added to the block chain.</p>
+								<p>The <a href="https://lucidcoin.org/en/developer-guide#locktime-and-sequence-number">locktime</a> indicates the earliest time a transaction can be added to the block chain.</p>
 								<input type="text" class="form-control" value="0" id="nLockTime">
 
 								<hr>
@@ -543,7 +543,7 @@
 
 								<label>Replace By Fee (RBF)</label>
 								<p class="checkbox">
-									<label><input type="checkbox" id="txRBF" class="checkbox-inline"> Make this a <a href="https://en.bitcoin.it/wiki/Transaction_replacement" target="_blank">RBF transaction</a>.</label>
+									<label><input type="checkbox" id="txRBF" class="checkbox-inline"> Make this a <a href="https://en.lucidcoin.it/wiki/Transaction_replacement" target="_blank">RBF transaction</a>.</label>
 								</p>
 
 								<hr>
@@ -743,7 +743,7 @@
 							<div><b>Version</b>: <span class="transactionVersion"></span></div>
 							<div><b>Transaction Size</b>: <span class="transactionSize"></span></div>
 							<div><b>Lock time</b>: <span class="transactionLockTime"></span></div>
-							<div class="transactionRBF"><b>RBF</b>: This is a <a href="https://en.bitcoin.it/wiki/Transaction_replacement">replace by fee</a> transaction!</div>
+							<div class="transactionRBF"><b>RBF</b>: This is a <a href="https://en.lucidcoin.it/wiki/Transaction_replacement">replace by fee</a> transaction!</div>
 
 							<hr>
 
@@ -952,9 +952,9 @@
 					</div>
 
 					<div class="tab-pane tab-content" id="broadcast">
-						<h2>Broadcast Transaction <small>into the bitcoin network</small></h2>
+						<h2>Broadcast Transaction <small>into the lucidcoin network</small></h2>
 						<a href="#settings" style="float:right;"><span class="glyphicon glyphicon-cog"></span></a>
-						<p>Enter your hex encoded bitcoin transaction</p>
+						<p>Enter your hex encoded lucidcoin transaction</p>
 						<textarea class="form-control" style="height:125px" id="rawTransaction"></textarea>
 						<br>
 						<div id="rawTransactionStatus" class="alert hidden">
@@ -970,21 +970,21 @@
 					</div>
 
 					<div class="tab-pane tab-content" id="about">
-						<h2>About <small>open source bitcoin wallet</small></h2>
+						<h2>About <small>open source lucidcoin wallet</small></h2>
 						<p>Version 1.2</p>
-						<p>Compatible with bitcoin-qt</p>
+						<p>Compatible with lucidcoin-qt</p>
 						<p>Github <a href="https://github.com/OutCast3k/coinbin/">https://github.com/OutCast3k/coinbin/</a></p>
 						<p>TOR <a href="http://4zpinp6gdkjfplhk.onion">4zpinp6gdkjfplhk.onion</a></p>
-						<h3>What is Bitcoin?</h3>
-						<p>Bitcoin is a type of digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank. See <a href="http://www.weusecoins.com/" target="_blank">weusecoins.com</a> for more information.</p>
-						<p>If you are looking to buy some Bitcoin try <a href="https://localbitcoins.com/?ch=173j" target="_blank">LocalBitcoins.com</a>.</p>
+						<h3>What is Lucidcoin?</h3>
+						<p>Lucidcoin is a type of digital currency in which encryption techniques are used to regulate the generation of units of currency and verify the transfer of funds, operating independently of a central bank. See <a href="http://www.weusecoins.com/" target="_blank">weusecoins.com</a> for more information.</p>
+						<p>If you are looking to buy some Lucidcoin try <a href="https://locallucidcoins.com/?ch=173j" target="_blank">LocalLucidcoins.com</a>.</p>
 						<h3>Information</h3>
-						<p>Coinb.in is a free and open source project released under the MIT license, originally by <a href="https://bitcointalk.org/index.php?action=profile;u=34834" target="_blank">OutCast3k</a> in 2013. Discussion of the project can be found at <a href="https://bitcointalk.org/index.php?topic=390046" target="_blank">bitcointalk.org</a> during its early testing stages when its primary focus was to develop a proof of concept multisig solution in javascript.</p>
+						<p>Coinb.in is a free and open source project released under the MIT license, originally by <a href="https://lucidcointalk.org/index.php?action=profile;u=34834" target="_blank">OutCast3k</a> in 2013. Discussion of the project can be found at <a href="https://lucidcointalk.org/index.php?topic=390046" target="_blank">lucidcointalk.org</a> during its early testing stages when its primary focus was to develop a proof of concept multisig solution in javascript.</p>
 						<p>Coinb.in is run and funded by the generosity of others in terms of <a href="https://github.com/OutCast3k/coinbin/graphs/contributors" target="_blank">development</a> and hosting.</p>
 						<h3>Privacy</h3>
-						<p>Coinb.in beleives strongly in privacy, not only do we support the use of TOR, the site does not collect and store IP or transaction data via our servers nor do we store your bitcoins private key. We do route traffic via cloudflare using an SSL certificate.</p>
+						<p>Coinb.in beleives strongly in privacy, not only do we support the use of TOR, the site does not collect and store IP or transaction data via our servers nor do we store your lucidcoins private key. We do route traffic via cloudflare using an SSL certificate.</p>
 						<h3>Donate</h3>
-						<p>Please donate to <a href="bitcoin:1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg">1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg</a> if you found this project useful or want to see more features!</p>
+						<p>Please donate to <a href="lucidcoin:1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg">1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg</a> if you found this project useful or want to see more features!</p>
 					</div>
 
 					<div class="tab-pane tab-content" id="settings">
@@ -996,12 +996,12 @@
 								<b>Network</b>: <br>
 								<p class="text-muted">Select which network you'd like to use for key pair generation.</p>
 								<select class="form-control" id="coinjs_coin">
-									<option value="bitcoin_mainnet" rel="0x00;0x80;0x05;0x488b21e;0x488ade4;coinb.in;coinb.in">Bitcoin (mainnet)</option>
+									<option value="lucidcoin_mainnet" rel="0x00;0x80;0x05;0x488b21e;0x488ade4;coinb.in;coinb.in">Lucidcoin (mainnet)</option>
 									<option value="litecoin_mainnet" rel="0x30;0xb0;0x05;0x019da462;0x019d9cfe;blockr.io_litecoin;chain.so_litecoin">Litecoin (mainnet)</option>
 									<option value="dogecoin_mainnet" rel="0x1e;0x9e;0x16;0x0827421e;0x089944e4;chain.so_dogecoin;chain.so_dogecoin">Dogecoin (mainnet)</option>
 									<option value="carboncoin_mainnet" rel="0x2f;0xaf;0x05;0x488b21e;0x488ade4;cryptoid.info_carboncoin;cryptoid.info_carboncoin">Carboncoin (mainnet)</option>
 									<option value="shadowcash_mainnet" rel="0x3f;0xbf;0x7d;0xee80286a;0xee8031e8;false;false">ShadowCash (mainnet)</option>
-									<option value="bitcoin_testnet" rel="0x6f;0xef;0xc4;0x043587cf;0x04358394;false;false">Bitcoin (testnet)</option>
+									<option value="lucidcoin_testnet" rel="0x6f;0xef;0xc4;0x043587cf;0x04358394;false;false">Lucidcoin (testnet)</option>
 
 									<option value="custom" rel="0x00;0x80;0x05;0x488b21e;0x488ade4;false;false">Custom</option>
 								</select>
@@ -1054,14 +1054,14 @@
 								<b>Broadcast</b>: <br>
 								<p class="text-muted">Select the network you wish to broadcast the transaction via</p>
 								<select class="form-control" id="coinjs_broadcast">
-									<option value="coinb.in">coinb.in (Bitcoin mainnet)</option>
-									<option value="blockr.io_bitcoinmainnet"> Blockr.io (Bitcoin mainnet)</option>
-									<option value="chain.so_bitcoinmainnet"> Chain.so (Bitcoin mainnet)</option>
-									<option value="blockcypher_bitcoinmainnet"> Blockcypher.com (Bitcoin mainnet)</option>
+									<option value="coinb.in">coinb.in (Lucidcoin mainnet)</option>
+									<option value="blockr.io_lucidcoinmainnet"> Blockr.io (Lucidcoin mainnet)</option>
+									<option value="chain.so_lucidcoinmainnet"> Chain.so (Lucidcoin mainnet)</option>
+									<option value="blockcypher_lucidcoinmainnet"> Blockcypher.com (Lucidcoin mainnet)</option>
 									<option value="blockr.io_litecoin"> Blockr.io (Litecoin)</option>
 									<option value="chain.so_dogecoin"> Chain.so (Dogecoin)</option>
 									<option value="cryptoid.info_carboncoin"> Cryptoid.info (Carboncoin)</option>
-								<!--	<option value="blockr.io_bitcointestnet"> Blockr.io (Bitcoin testnet)</option> -->
+								<!--	<option value="blockr.io_lucidcointestnet"> Blockr.io (Lucidcoin testnet)</option> -->
 								</select>
 							</div>
 						</div>
@@ -1073,8 +1073,8 @@
 								<b>Unspent outputs</b>: <br>
 								<p class="text-muted">Select the network you wish to retreive your unspent inputs from</p>
 								<select class="form-control" id="coinjs_utxo">
-									<option value="coinb.in">coinb.in (Bitcoin mainnet)</option>
-									<option value="blockr.io_bitcoinmainnet"> Blockr.io (Bitcoin mainnet)</option>
+									<option value="coinb.in">coinb.in (Lucidcoin mainnet)</option>
+									<option value="blockr.io_lucidcoinmainnet"> Blockr.io (Lucidcoin mainnet)</option>
 									<option value="chain.so_litecoin"> Chain.so (Litecoin)</option>
 									<option value="chain.so_dogecoin"> Chain.so (Dogecoin)</option>
 									<option value="cryptoid.info_carboncoin"> Cryptoid.info (Carboncoin)</option>

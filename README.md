@@ -1,7 +1,7 @@
 coinbin
 =======
 
-A Open Source Browser Based Bitcoin Wallet. Version 1.2 beta by OutCast3k
+A Open Source Browser Based Lucidcoin Wallet. Version 1.2 beta by OutCast3k
 
 Live version available at http://coinb.in/ or http://4zpinp6gdkjfplhk.onion
 
@@ -22,7 +22,7 @@ Coinb.in supports a number of key features such as:
 - Add custom data to transactions with the use of OP_RETURN.
 - Support current Dark Wallet Stealth Address structure (as of version Alpha 7) for outputs.
 - Brain wallet support.
-- Compatible with bitcoin-qt
+- Compatible with lucidcoin-qt
 - An offical .onion address for tor users.
 - Offline qrcode creator and scanning tool
 - HD (bip32) support

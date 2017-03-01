@@ -30,7 +30,7 @@ $(document).ready(function() {
 
 					$("#walletQrCode").html("");
 					var qrcode = new QRCode("walletQrCode");
-					qrcode.makeCode("bitcoin:"+keys.address);
+					qrcode.makeCode("lucidcoin:"+keys.address);
 
 					$("#walletKeys .privkey").val(keys.wif);
 					$("#walletKeys .pubkey").val(keys.pubkey);
@@ -67,7 +67,7 @@ $(document).ready(function() {
 
 		$("#walletQrCode").html("");
 		var qrcode = new QRCode("walletQrCode");
-		qrcode.makeCode("bitcoin:");
+		qrcode.makeCode("lucidcoin:");
 
 		$("#walletKeys .privkey").val("");
 		$("#walletKeys .pubkey").val("");
@@ -256,7 +256,7 @@ $(document).ready(function() {
 		}
 		var s = ($("#newBrainwallet").is(":checked")) ? $("#brainwallet").val() : null;
 		var coin = coinjs.newKeys(s);
-		$("#newBitcoinAddress").val(coin.address);
+		$("#newLucidcoinAddress").val(coin.address);
 		$("#newPubKey").val(coin.pubkey);
 		$("#newPrivKey").val(coin.wif);
 
@@ -645,7 +645,7 @@ $(document).ready(function() {
 
 			QCodeDecoder().decodeFromCamera(document.getElementById('videoReader'), function(er,data){
 				if(!er){
-					var match = data.match(/^bitcoin\:([13][a-z0-9]{26,33})/i);
+					var match = data.match(/^lucidcoin\:([13][a-z0-9]{26,33})/i);
 					var result = match ? match[1] : data;
 					$(""+$("#qrcode-scanner-callback-to").html()).val(result);
 					$("#qrScanClose").click();
@@ -683,8 +683,8 @@ $(document).ready(function() {
 		var host = $(this).attr('rel');
 
 
-		if(host=='blockr.io_bitcoinmainnet'){
-			listUnspentBlockrio_BitcoinMainnet(redeem);
+		if(host=='blockr.io_lucidcoinmainnet'){
+			listUnspentBlockrio_LucidcoinMainnet(redeem);
 		} else if(host=='chain.so_litecoin'){
 			listUnspentChainso_Litecoin(redeem);
 		}  else if(host=='chain.so_dogecoin'){
@@ -816,7 +816,7 @@ $(document).ready(function() {
 	}
 
 	/* retrieve unspent data from blockrio for mainnet */
-	function listUnspentBlockrio_BitcoinMainnet(redeem){
+	function listUnspentBlockrio_LucidcoinMainnet(redeem){
 		$.ajax ({
 			type: "POST",
 			url: "https://btc.blockr.io/api/v1/address/unspent/"+redeem.addr+"?unconfirmed=1",
@@ -1028,7 +1028,7 @@ $(document).ready(function() {
 		$(thisbtn).val('Please wait, loading...').attr('disabled',true);
 		$.ajax ({
 			type: "POST",
-			url: coinjs.host+'?uid='+coinjs.uid+'&key='+coinjs.key+'&setmodule=bitcoin&request=sendrawtransaction',
+			url: coinjs.host+'?uid='+coinjs.uid+'&key='+coinjs.key+'&setmodule=lucidcoin&request=sendrawtransaction',
 			data: {'rawtx':$("#rawTransaction").val()},
 			dataType: "xml",
 			error: function(data) {
@@ -1078,7 +1078,7 @@ $(document).ready(function() {
 	}
 
 	// broadcast transaction via blockr.io (mainnet)
-	function rawSubmitBlockrio_BitcoinMainnet(thisbtn){ 
+	function rawSubmitBlockrio_LucidcoinMainnet(thisbtn){ 
 		$(thisbtn).val('Please wait, loading...').attr('disabled',true);
 		$.ajax ({
 			type: "POST",
@@ -1108,7 +1108,7 @@ $(document).ready(function() {
 	}
 
 	// broadcast transaction via blockr.io (mainnet)
-	function rawSubmitChainso_BitcoinMainnet(thisbtn){ 
+	function rawSubmitChainso_LucidcoinMainnet(thisbtn){ 
 		$(thisbtn).val('Please wait, loading...').attr('disabled',true);
 		$.ajax ({
 			type: "POST",
@@ -1137,7 +1137,7 @@ $(document).ready(function() {
 	}
 
 	// broadcast transaction via blockcypher.com (mainnet)
-	function rawSubmitblockcypher_BitcoinMainnet(thisbtn){ 
+	function rawSubmitblockcypher_LucidcoinMainnet(thisbtn){ 
 		$(thisbtn).val('Please wait, loading...').attr('disabled',true);
 		$.ajax ({
 			type: "POST",
@@ -1561,7 +1561,7 @@ $(document).ready(function() {
 			}
 		} else {
 			var qrcode = new QRCode("qrcode");
-			qrstr = "bitcoin:"+$('.address',thisbtn).val();
+			qrstr = "lucidcoin:"+$('.address',thisbtn).val();
 		}
 
 		if(qrstr){
@@ -1693,21 +1693,21 @@ $(document).ready(function() {
 			$("#rawSubmitBtn").click(function(){
 				rawSubmitBlockrio_litecoin(this)
 			});
-		} else if(host=="blockr.io_bitcoinmainnet"){
+		} else if(host=="blockr.io_lucidcoinmainnet"){
 			$("#rawSubmitBtn").click(function(){
-				rawSubmitBlockrio_BitcoinMainnet(this);
+				rawSubmitBlockrio_LucidcoinMainnet(this);
 			});
-		} else if(host=="chain.so_bitcoinmainnet"){
+		} else if(host=="chain.so_lucidcoinmainnet"){
 			$("#rawSubmitBtn").click(function(){
-				rawSubmitChainso_BitcoinMainnet(this);
+				rawSubmitChainso_LucidcoinMainnet(this);
 			});
 		} else if(host=="chain.so_dogecoin"){
 			$("#rawSubmitBtn").click(function(){
 				rawSubmitchainso_dogecoin(this);
 			});
-		} else if(host=="blockcypher_bitcoinmainnet"){
+		} else if(host=="blockcypher_lucidcoinmainnet"){
 			$("#rawSubmitBtn").click(function(){
-				rawSubmitblockcypher_BitcoinMainnet(this);
+				rawSubmitblockcypher_LucidcoinMainnet(this);
 			});
 		} else if(host=="cryptoid.info_carboncoin"){
 			$("#rawSubmitBtn").click(function(){

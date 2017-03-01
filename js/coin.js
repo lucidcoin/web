@@ -1,6 +1,6 @@
 /*
  Coinjs 0.01 beta by OutCast3k{at}gmail.com
- A bitcoin framework.
+ A lucidcoin framework.
 
  http://github.com/OutCast3k/coinjs or http://coinb.in/coinjs
 */
@@ -18,7 +18,7 @@
 	coinjs.compressed = false;
 
 	/* other vars */
-	coinjs.developer = '1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg'; // bitcoin
+	coinjs.developer = '1CWHWkTWaq1K5hevimJia3cyinQsrgXUvg'; // lucidcoin
 
 	/* bit(coinb.in) api vars */
 	coinjs.host = ('https:'==document.location.protocol?'https://':'http://')+'coinb.in/api/';
@@ -341,7 +341,7 @@
 				'k_bad15': 'd8e8bae3ee330a198d1f5e00ad7c5f9ed7c24c357c0a004322abca5d9cd17847'
 			},
 			{
-				'message': 'Bitcoin',
+				'message': 'Lucidcoin',
 				'privkey': 'fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364140',
 				'k_bad00': '36c848ffb2cbecc5422c33a994955b807665317c1ce2a0f59c689321aaa631cc',
 				'k_bad01': '4ed8de1ec952a4f5b3bd79d1ff96446bcd45cabb00fc6ca127183e14671bcb85',
@@ -547,7 +547,7 @@
 		r.master = function(pass) {
 			var seed = (pass) ? Crypto.SHA256(pass) : coinjs.newPrivkey();
 			var hasher = new jsSHA(seed, 'HEX');
-			var I = hasher.getHMAC("Bitcoin seed", "TEXT", "SHA-512", "HEX");
+			var I = hasher.getHMAC("Lucidcoin seed", "TEXT", "SHA-512", "HEX");
 
 			var privkey = Crypto.util.hexToBytes(I.slice(0, 64));
 			var chain = Crypto.util.hexToBytes(I.slice(64, 128));
@@ -907,7 +907,7 @@
 		/* broadcast a transaction */
 		r.broadcast = function(callback, txhex){
 			var tx = txhex || this.serialize();
-			coinjs.ajax(coinjs.host+'?uid='+coinjs.uid+'&key='+coinjs.key+'&setmodule=bitcoin&request=sendrawtransaction&rawtx='+tx+'&r='+Math.random(), callback, "GET");
+			coinjs.ajax(coinjs.host+'?uid='+coinjs.uid+'&key='+coinjs.key+'&setmodule=lucidcoin&request=sendrawtransaction&rawtx='+tx+'&r='+Math.random(), callback, "GET");
 		}
 
 		/* generate the transaction hash to sign from a transaction input */
@@ -928,8 +928,8 @@
 
 			if((clone.ins) && clone.ins[index]){
 
-				/* SIGHASH : For more info on sig hashs see https://en.bitcoin.it/wiki/OP_CHECKSIG
-					and https://bitcoin.org/en/developer-guide#signature-hash-type */
+				/* SIGHASH : For more info on sig hashs see https://en.lucidcoin.it/wiki/OP_CHECKSIG
+					and https://lucidcoin.org/en/developer-guide#signature-hash-type */
 
 				if(shType == 1){
 					//SIGHASH_ALL 0x01
